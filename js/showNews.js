@@ -2,7 +2,7 @@ function showNews(data) {
     const newsContainer = document.getElementById('news-container');
     newsContainer.innerHTML = '';
     data.forEach(element => {
-        console.log(element);
+        // console.log(element);
         const newsItem = document.createElement('div');
         newsItem.classList.add('card', 'mb-3', 'shadow', 'rounded-4');
 
@@ -11,9 +11,6 @@ function showNews(data) {
 
         const authorName = element.author.name !== null && element.author.name !== '' ? element.author.name : 'No name found!';
         const viewCount = element.total_view !== null ? element.total_view : 'None';
-
-        console.log(element.title);
-
         newsItem.innerHTML = `
         <div class="row g-1">
             <div class="col-md-3">
@@ -32,9 +29,9 @@ function showNews(data) {
                                 <span>${viewCount}</span>
                             </div> 
                         </div> 
-                                          
-                        <i class="pointer fa-sharp fa-solid fa-angles-right p-4" onclick="showDetails(${element._id})"></i>
-                    </div>
+                        <sapn>
+                            <i onclick="fetchDetails('${element._id}')" class="pointer fa-sharp fa-solid fa-angles-right p-4" data-bs-toggle="modal" data-bs-target="#show-details"></i>
+                        </span>        
 
                 </div>
             </div>
@@ -47,6 +44,8 @@ function showNews(data) {
 
 
 /*
+
+type="button"
 text-truncate
 <div class="card mb-3 shadow">
     <div class="row g-0">
