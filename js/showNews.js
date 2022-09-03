@@ -8,6 +8,9 @@ function showNews(data) {
 
         const maxLength = 500;
         const str = element.details.length > maxLength ? element.details.substr(0, maxLength) + '...' : element.details;
+
+        const authorName = element.author.name !== null ? element.author.name : 'Author Name is not found!';
+        console.log(authorName)
         newsItem.innerHTML = `
         <div class="row g-1">
             <div class="col-md-3">
@@ -16,11 +19,14 @@ function showNews(data) {
             <div class="col-md-9">
                 <div class="card-body">
                     <h5 class="card-title text-primary py-3">${element.title}</h5>
-                    <p class="card-text" style="height:">${str}</p>
+                    <p class="card-text">${str}</p>
                     <div>
-                    
+                        <div >
+                            <img class="img-fluid rounded-circle" src="${element.author.img}" alt="Author Image" style="height: 70px; width: auto;">
+                            <span class="ps-3 text-secondary">${authorName}</span>
+                        </div>                    
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
         </div>        
