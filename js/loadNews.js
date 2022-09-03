@@ -3,7 +3,7 @@ function loadNews(data, categoryName) {
     try {
         fetch(url)
             .then(res => res.json())
-            .then(json => showNews(json.data, categoryName))
+            .then(json => sortNews(json.data, categoryName))
     } catch (error) {
         document.getElementById('error-data').innerText = `Data not found`
     }

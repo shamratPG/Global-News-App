@@ -14,7 +14,6 @@ function showNews(data, categoryName) {
         errorData.classList.remove('d-none');
 
     } else if (numberOfNews > 0) {
-        console.log(data);
         newsNumberContainer.innerHTML = `
             <h4 class="p-3">${numberOfNews} News Items found in <span class="text-primary"> ${categoryName}</span> category</h4>
         `;
