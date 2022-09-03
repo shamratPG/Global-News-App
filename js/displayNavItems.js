@@ -3,7 +3,7 @@ function displayCategory(data) {
     data.forEach(element => {
         // console.log(element.category_name)
         const category = document.createElement('a');
-        category.classList.add("nav-link");
+        category.classList.add("nav-link", "pointer", "fw-semibold");
         const att = document.createAttribute("onclick");
         att.value = `loadNews('${element.category_id}')`;
 

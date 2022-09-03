@@ -9,8 +9,11 @@ function showNews(data) {
         const maxLength = 500;
         const str = element.details.length > maxLength ? element.details.substr(0, maxLength) + '...' : element.details;
 
-        const authorName = element.author.name !== null ? element.author.name : 'Author Name is not found!';
-        console.log(authorName)
+        const authorName = element.author.name !== null && element.author.name !== '' ? element.author.name : 'No name found!';
+        const viewCount = element.total_view !== null ? element.total_view : 'None';
+
+        console.log(element.title);
+
         newsItem.innerHTML = `
         <div class="row g-1">
             <div class="col-md-3">
@@ -20,13 +23,19 @@ function showNews(data) {
                 <div class="card-body">
                     <h5 class="card-title text-primary py-3">${element.title}</h5>
                     <p class="card-text">${str}</p>
-                    <div>
-                        <div >
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
                             <img class="img-fluid rounded-circle" src="${element.author.img}" alt="Author Image" style="height: 70px; width: auto;">
                             <span class="ps-3 text-secondary">${authorName}</span>
-                        </div>                    
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <div class="text-primary ps-4">
+                                <i class="fa-solid fa-eye pe-1"></i>
+                                <span>${viewCount}</span>
+                            </div> 
+                        </div> 
+                                          
+                        <i class="pointer fa-sharp fa-solid fa-angles-right p-4" onclick="showDetails(${element._id})"></i>
                     </div>
+
                 </div>
             </div>
         </div>        
