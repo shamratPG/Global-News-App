@@ -29,7 +29,7 @@
 
 <body>
     <header class="container fw-semibold">
-        <nav class="navbar navbar-expand-lg bg-light shadow">
+        <nav class="navbar navbar-expand-lg bg-light shadow rounded">
             <div class="container-fluid">
                 <a class="navbar-brand fs-3" href="#"><span class="text-primary">Global</span>News</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -53,9 +53,7 @@
     <main class="container">
         <!-- News Catagory -->
         <section>
-            <div id="error-data"></div>
-
-            <nav class="navbar navbar-expand-lg bg-light shadow mb-5">
+            <nav class="navbar navbar-expand-lg bg-light shadow mb-3 rounded">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,6 +65,22 @@
                     </div>
                 </div>
             </nav>
+        </section>
+
+        <!-- News Number Section  -->
+
+        <section>
+            <div id="news-number" class="container shadow text-center mb-4 rounded">
+
+            </div>
+        </section>
+
+        <!-- Error Data Section  -->
+        <section>
+            <div id="error-data" class="container d-flex justify-content-center align-items-center d-none"
+                style="height:300px;">
+                <p class="text-primary fs-3">No News Found!!!</p>
+            </div>
         </section>
 
         <section>
