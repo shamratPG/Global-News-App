@@ -18,7 +18,7 @@
 ### Links
 
 - [Solution URL](https://github.com/Programming-Hero-Web-Course4/b6-news-portal-assignment-shamratPG)
-- [Live Site URL](https://global-news-shamratpg.netlify.app/)
+- [Live Site URL](https://global-news-shamrat-hossain.netlify.app/)
 
 
 ### Built with
