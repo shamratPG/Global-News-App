@@ -39,6 +39,7 @@ function showNews(data) {
         </div>        
         `;
         newsContainer.appendChild(newsItem);
+        showSpinner(false);
     });
 
 }
