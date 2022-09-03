@@ -4,7 +4,7 @@ function fetchCatagories() {
     try {
         fetch(url)
             .then(res => res.json())
-            .then(json => displayNavItems(json.data.news_category))
+            .then(json => displayCategory(json.data.news_category))
     } catch (error) {
         document.getElementById('error-data').innerText = `Data not found`
     }
