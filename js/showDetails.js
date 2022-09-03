@@ -16,6 +16,9 @@ function showDetails(data) {
             <h5 class="modal-title" id="show-detailsLabel">${newsTitle}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="">
+            <img class="img-fluid" src = "${data.image_url}">
+        </div>
         <div class="ps-3 pt-2 d-flex align-items-center">
             <img class="img-fluid rounded-circle" src="${data.author.img}" alt="Author Image" style="height: 40px; width: auto;">
             <span class="ps-3 text-secondary">${authorName}</span>
@@ -24,7 +27,7 @@ function showDetails(data) {
                 <span>${viewCount}</span>
             </div> 
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-start">
             <p>${details}</p>
         </div>
     `;

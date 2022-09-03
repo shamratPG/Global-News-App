@@ -26,12 +26,11 @@
 </head>
 
 
-
-<body>
-    <header class="container fw-semibold">
+<body class="bg-light bg-gradient">
+    <header class="container fw-semibold mt-5">
         <nav class="navbar navbar-expand-lg bg-light shadow rounded">
             <div class="container-fluid">
-                <a class="navbar-brand fs-3" href="#"><span class="text-primary">Global</span>News</a>
+                <a class="navbar-brand fs-3" href="index.html"><span class="text-primary">Global</span>News</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -39,8 +38,8 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link pointer" href="#">News</a>
-                        <a class="nav-link pointer" href="#">Blog</a>
+                        <a class="nav-link pointer" href="index.html">News</a>
+                        <a class="nav-link pointer" href="blog.html">Blog</a>
                     </div>
                 </div>
             </div>
@@ -53,7 +52,7 @@
     <main class="container">
         <!-- News Catagory -->
         <section>
-            <nav class="navbar navbar-expand-lg bg-light shadow mb-3 rounded">
+            <nav class="navbar navbar-expand-lg bg-light shadow mb-4 rounded">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,26 +82,12 @@
             </div>
         </section>
 
+        <!-- News Container Section  -->
         <section>
             <div id="news-container">
-                <!-- <div class="card mb-3" style="max-width: 540px;"> -->
-
             </div>
         </section>
     </main>
-
-    <!-- modal -->
-
-
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#show-details">show-details
-        Launch demo modal
-    </button> -->
-
-    <!-- <div class="d-flex align-items-center">
-        <button type="button" id="show-details" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#show-details">Show Details..
-        </button>
-    </div> -->
 
     <!-- Modal -->
     <div class="modal fade" id="show-details" tabindex="-1" aria-labelledby="show-detailsLabel" aria-hidden="true">
@@ -117,8 +102,6 @@
         </div>
     </div>
 
-
-
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
@@ -126,7 +109,7 @@
 
     <!-- scripts -->
     <script src="js/fetchCatagories.js"></script>
-    <script src="js/displayNavItems.js"></script>
+    <script src="js/displayCategory.js"></script>
     <script src="js/loadNews.js"></script>
     <script src="js/showNews.js"></script>
     <script src="js/fetchDetails.js"></script>

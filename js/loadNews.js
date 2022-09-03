@@ -7,6 +7,5 @@ function loadNews(data, categoryName) {
     } catch (error) {
         document.getElementById('error-data').innerText = `Data not found`
     }
-
     showSpinner(true);
 }

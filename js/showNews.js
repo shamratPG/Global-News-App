@@ -9,7 +9,7 @@ function showNews(data, categoryName) {
 
     const newsNumberContainer = document.getElementById('news-number');
     newsNumberContainer.innerHTML = ``;
-    console.log(data);
+    // console.log(data);
     if (numberOfNews === 0) {
         errorData.classList.remove('d-none');
 
@@ -24,25 +24,30 @@ function showNews(data, categoryName) {
             const newsItem = document.createElement('div');
             newsItem.classList.add('card', 'mb-3', 'shadow', 'rounded-4');
 
-            const maxLength = 500;
+            const maxLength = 400;
             const str = element.details.length > maxLength ? element.details.substr(0, maxLength) + '...' : element.details;
 
             const authorName = element.author.name !== null && element.author.name !== '' ? element.author.name : 'No name found!';
             const viewCount = element.total_view !== null ? element.total_view : 'None';
             newsItem.innerHTML = `
-            <div class="row g-1">
-                <div class="col-md-3">
+            <div class="row g-1 bg-light">
+                <div class="d-none d-sm-block col-lg-3">
+                    <picture>
+                    <source srcset="${element.image_url}" media="(max-width: 992px)">
                     <img src="${element.thumbnail_url}" class="img-fluid rounded-start" alt="...">
+                    </picture>
+
+                    
                 </div>
-                <div class="col-md-9">
+                <div class="col-lg-9">
                     <div class="card-body d-flex flex-column justify-content-between h-100">
                     <div>
-                        <h5 class="card-title text-primary py-3">${element.title}</h5>
+                        <h5 class="card-title text-primary pb-2">${element.title}</h5>
                         <p class="card-text">${str}</p>
                     </div>
-                    <div class="d-flex justify-content-between py-3">
+                    <div class="d-flex justify-content-between">
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid rounded-circle" src="${element.author.img}" alt="Author Image" style="height: 70px; width: auto;">
+                            <img class="img-fluid rounded-circle" src="${element.author.img}" alt="Author Image" style="height: 50px; width: auto;">
                             <span class="ps-3 text-secondary">${authorName}</span>
                             <div class="text-primary ps-4">
                                 <i class="fa-solid fa-eye pe-1"></i>

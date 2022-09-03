@@ -11,4 +11,5 @@ function displayCategory(data) {
         category.innerText = `${element.category_name}`;
         categoryContainer.appendChild(category);
     });
+    loadNews('08', 'All News')
 }
