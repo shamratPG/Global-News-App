@@ -17,22 +17,23 @@ function showNews(data) {
                 <img src="${element.thumbnail_url}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-9">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                <div>
                     <h5 class="card-title text-primary py-3">${element.title}</h5>
                     <p class="card-text">${str}</p>
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid rounded-circle" src="${element.author.img}" alt="Author Image" style="height: 70px; width: auto;">
-                            <span class="ps-3 text-secondary">${authorName}</span>
-                            <div class="text-primary ps-4">
-                                <i class="fa-solid fa-eye pe-1"></i>
-                                <span>${viewCount}</span>
-                            </div> 
+                </div>
+                <div class="d-flex justify-content-between py-3">
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid rounded-circle" src="${element.author.img}" alt="Author Image" style="height: 70px; width: auto;">
+                        <span class="ps-3 text-secondary">${authorName}</span>
+                        <div class="text-primary ps-4">
+                            <i class="fa-solid fa-eye pe-1"></i>
+                            <span>${viewCount}</span>
                         </div> 
-                        <sapn>
-                            <i onclick="fetchDetails('${element._id}')" class="pointer fa-sharp fa-solid fa-angles-right p-4" data-bs-toggle="modal" data-bs-target="#show-details"></i>
-                        </span>        
-
+                    </div> 
+                    <sapn>
+                        <i onclick="fetchDetails('${element._id}')" class="pointer fa-sharp fa-solid fa-angles-right p-4" data-bs-toggle="modal" data-bs-target="#show-details"></i>
+                    </span>   
                 </div>
             </div>
         </div>        

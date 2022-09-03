@@ -9,7 +9,7 @@ function fetchDetails(id) {
     try {
         fetch(url)
             .then(res => res.json())
-            .then(json => showDetails(json))
+            .then(json => showDetails(json.data[0]))
     } catch (error) {
         document.getElementById('error-data').innerText = `Data not found`
     }
