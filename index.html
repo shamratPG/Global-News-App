@@ -26,7 +26,7 @@
 </head>
 
 
-<body class="bg-light bg-gradient">
+<body class="bg-light bg-gradient container">
     <header class="container fw-semibold mt-4">
         <nav class="navbar navbar-expand-lg bg-light shadow rounded">
             <div class="container-fluid">
@@ -49,7 +49,7 @@
     </header>
 
 
-    <main class="container">
+    <main class=" container">
         <!-- News Catagory -->
         <section>
             <nav class="navbar navbar-expand-lg bg-light shadow mb-4 rounded">
@@ -69,15 +69,14 @@
         <!-- News Number Section  -->
 
         <section>
-            <div id="news-number" class="container shadow text-center mb-4 rounded">
+            <div id="news-number" class="shadow text-center mb-4 rounded">
 
             </div>
         </section>
 
         <!-- Error Data Section  -->
         <section>
-            <div id="error-data" class="container d-flex justify-content-center align-items-center d-none"
-                style="height:300px;">
+            <div id="error-data" class="d-flex justify-content-center align-items-center d-none" style="height:300px;">
                 <p class="text-primary fs-3">No News Found!!!</p>
             </div>
         </section>
@@ -87,6 +86,8 @@
             <div id="news-container">
             </div>
         </section>
+
+        <hr class="mt-5 border border-primary border-3 opacity-25">
     </main>
 
     <!-- Modal -->
@@ -101,6 +102,8 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
+
+
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -117,6 +120,11 @@
     <script src="js/spinner.js"></script>
     <script src="js/sort.js"></script>
 </body>
+
+<footer class=" container bg-light d-flex justify-content-center align-items-center" style="height:100px ;">
+
+    <p class="text-secondary ">Created By Md. Shamrat Hossain</p>
+</footer>
 
 </html>
 

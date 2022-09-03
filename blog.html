@@ -26,7 +26,7 @@
 </head>
 
 
-<body class="bg-light bg-gradient">
+<body class="bg-light bg-gradient container">
     <header class="container fw-semibold mt-4">
         <nav class="navbar navbar-expand-lg bg-light shadow rounded">
             <div class="container-fluid">
@@ -51,6 +51,134 @@
 
     <main class="container">
 
+        <!-- Var Let & Const  -->
+        <div class="card mb-4 bg-light shadow">
+            <img src="images/varLet.jpg" class="card-img-top" alt="..." style="height: 300;">
+            <div class="card-body">
+                <h5 class="card-title mb-4 fs-3 text-primary">Var, Let, and Const – What's the Difference?</h5>
+                <div class="card-text">
+                    <p>
+                        <b>Var</b>
+                        <br>
+                        Before the advent of ES6, var declarations ruled. There are issues associated with variables
+                        declared with var, though. That is why it was necessary for new ways to declare variables to
+                        emerge.
+                        First, let's get to understand var more before we discuss those issues.
+                    </p>
+                    <p>
+                        <b>Let</b>
+                        <br>
+
+                        let is now preferred for variable declaration. It's no surprise as it comes as an improvement to
+                        var declarations. It also solves the problem with var that we just covered. Let's consider why
+                        this is so.
+                    </p>
+                    <p>
+                        <b>Const</b>
+                        <br>
+                        Variables declared with the const maintain constant values. const declarations share some
+                        similarities with let declarations.
+                        const declarations are block scoped
+                        Like let declarations, const declarations can only be accessed within the block they were
+                        declared.
+                    </p>
+                </div>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <!-- Arrow & Regular  -->
+        <div class="card mb-4 bg-light shadow">
+            <img src="images/arrowRegular.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title mb-4 fs-3 text-primary">The Difference Between Regular Functions and Arrow
+                    Functions</h5>
+                <div class="card-text">
+                    <p> Arrow function — also called fat arrow function— is a new feature introduced in
+                        ES6
+                        that is a more concise syntax for writing function expressions. While both regular JavaScript
+                        functions and arrow functions work in a similar manner, there are certain differences between
+                        them.</p>
+                    <p>
+                        <b>1.Syntax</b> <br>
+                        The arrow function example above allows a developer to accomplish the same result with fewer
+                        lines of code and approximately half the typing.
+                    </p>
+                    <p>
+                        <b>2. Arguments binding</b> <br>
+
+                        Arrow functions do not have an arguments binding. However, they have access to the arguments
+                        object of the closest non-arrow parent function. Named and rest parameters are heavily relied
+                        upon to capture the arguments passed to arrow functions.
+                    </p>
+                    <p>
+                        <b>3. Use of this keyword</b> <br>
+
+
+                        Unlike regular functions, arrow functions do not have their own this. The value of this inside
+                        an arrow function remains the same throughout the lifecycle of the function and is always bound
+                        to the value of this in the closest non-arrow parent function.
+                    </p>
+                </div>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <!-- Map, ForEach, Filter, Find -->
+        <div class="card mb-4 bg-light shadow">
+            <img src="images/filterMap.jpg" class="card-img-top" alt="..." style="height: 300;">
+            <div class="card-body">
+                <h5 class="card-title mb-4 fs-3 text-primary">.forEach(), .map(), .filter() .... What's the difference?
+                </h5>
+                <div class="card-text">
+                    <p><b>.forEach:</b>
+                        <br>
+                        .forEach(), is used to execute the same code on every element in an array but does not change
+                        the array and it returns undefined.
+                    </p>
+                    <p><b>.map():</b>
+                        <br>
+
+                        .map() executes the same code on every element in an array and returns a new array with the
+                        updated elements.
+                    </p>
+                    <p><b>.filter():</b>
+                        <br>
+                        .filter() checks every element in an array to see if it meets a certain criteria and returns a
+                        new array with the elements that return truthy for the criteria.
+                    </p>
+                </div>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <!-- Template String  -->
+        <div class="card mb-4 bg-light shadow">
+            <img src="images/templateString.jpg" class="card-img-top" alt="..." style="height: 300;">
+            <div class="card-body">
+                <h5 class="card-title mb-4 fs-3 text-primary">Template Strings in JavaScript</h5>
+                <div class="card-text">
+                    <p>
+                        Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                        insert/interpolate variables and expressions into strings without needing to concatenate like in
+                        older versions of JavaScript. It allows us to create strings that are complex and contain
+                        dynamic elements. Another great thing that comes with template strings are tags. Tags are
+                        functions that take a string and the decomposed parts of the string as parameters and are great
+                        for converting strings to different entities.
+                    </p>
+                    <p>
+                        <b>Multiline Strings</b>
+
+                        <br>
+                        Another great feature of template strings is that we can have strings with multiple lines for
+                        better code readability. This cannot be done in an easy way with the old style of strings.
+                    </p>
+                </div>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <hr class="mt-5 border border-primary border-3 opacity-25">
     </main>
 
 
@@ -59,5 +187,10 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 </body>
+
+<footer class=" container bg-light d-flex justify-content-center align-items-center" style="height:100px ;">
+
+    <p class="text-secondary ">Created By Md. Shamrat Hossain</p>
+</footer>
 
 </html>
