@@ -5,7 +5,9 @@ function loadNews(data, categoryName) {
             .then(res => res.json())
             .then(json => sortNews(json.data, categoryName))
     } catch (error) {
-        document.getElementById('error-data').innerText = `Data not found`
+        const errorData = document.getElementById('error-data');
+        errorData.classList.remove('d-none');
+        console.log(error);
     }
     showSpinner(true);
 }

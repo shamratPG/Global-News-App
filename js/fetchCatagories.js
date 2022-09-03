@@ -6,7 +6,9 @@ function fetchCatagories() {
             .then(res => res.json())
             .then(json => displayCategory(json.data.news_category))
     } catch (error) {
-        document.getElementById('error-data').innerText = `Data not found`
+        const errorData = document.getElementById('error-data');
+        errorData.classList.remove('d-none');
+        console.log(error);
     }
 }
 
